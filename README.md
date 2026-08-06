@@ -24,32 +24,30 @@ Analysis of 17 seasons of IPL ball-by-ball data (2008–2026) covering 1,243 mat
 - 27 columns including striker, bowler, runs, extras, wicket type, venue
 
 ---
-
 ## Folder Structure
 
+```text
 ipl-performance-analytics/
 │
 ├── data/
-│ ├── raw/
-│ │ └── all_matches.csv
-│ └── processed/
-│ ├── batting_phase_stats.csv
-│ ├── bowling_phase_stats.csv
-│ ├── toss_venue_analysis.csv
-│ ├── team_head_to_head.csv
-│ ├── season_scoring_trend.csv
-│ └── match_summary.csv
+│   ├── raw/
+│   │   └── all_matches.csv
+│   └── processed/
+│       ├── batting_phase_stats.csv
+│       ├── bowling_phase_stats.csv
+│       ├── toss_venue_analysis.csv
+│       ├── team_head_to_head.csv
+│       ├── season_scoring_trend.csv
+│       └── match_summary.csv
 │
 ├── notebooks/
-│ └── ipl_analysis.ipynb
+│   └── ipl_analysis.ipynb
 │
 ├── dashboard/
-│ └── ipl_dashboard.pbix
+│   └── ipl_dashboard.pbix
 │
 └── README.md
-
-
----
+```
 
 ## What Was Built
 
