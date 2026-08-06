@@ -1,4 +1,4 @@
-"""# 🏏 IPL Player Performance & Match Strategy Analytics
+### 🏏 IPL Player Performance & Match Strategy Analytics
 
 ## Project Overview
 Analysis of 17 seasons of IPL ball-by-ball data (2008–2026) covering 1,243 matches and 295,732 deliveries. The goal was to uncover phase-specific player strengths, venue patterns, toss impact, and team rivalry trends that are not visible in standard scorecards.
