@@ -1,30 +1,58 @@
-### 🏏 IPL Player Performance & Match Strategy Analytics
+# 🏏 IPL Player Performance & Match Strategy Analytics
 
-## Project Overview
-Analysis of 17 seasons of IPL ball-by-ball data (2008–2026) covering 1,243 matches and 295,732 deliveries. The goal was to uncover phase-specific player strengths, venue patterns, toss impact, and team rivalry trends that are not visible in standard scorecards.
+An end-to-end data analytics project that analyzes **17 IPL seasons (2008–2026)** using ball-by-ball data from Cricsheet. The project uncovers player performance across different match phases, venue trends, toss impact, team rivalries, and season-wise scoring patterns through Python-based analysis and an interactive Power BI dashboard.
 
 ---
 
-## Tech Stack
+## 📌 Project Overview
+
+This project analyzes:
+
+- **1,243 IPL matches**
+- **295,732 ball-by-ball deliveries**
+- **17 IPL seasons (2008–2026)**
+
+The analysis focuses on identifying insights that are not visible in traditional scorecards, including:
+
+- Phase-wise batting and bowling performance
+- Venue and toss impact
+- Team head-to-head records
+- Season-wise scoring trends
+
+---
+
+## 🛠️ Tech Stack
+
 | Tool | Purpose |
-|---|---|
-| Python (Pandas, NumPy) | Data cleaning, wrangling, feature engineering |
-| Matplotlib, Seaborn | Exploratory data analysis, visualisations |
-| Power BI | Interactive 4-page dashboard |
+|------|---------|
+| Python (Pandas, NumPy) | Data cleaning, transformation, and feature engineering |
+| Matplotlib & Seaborn | Exploratory Data Analysis (EDA) and visualizations |
+| Power BI | Interactive dashboard |
 | Jupyter Notebook | Analysis environment |
-| Cricsheet | Data source (ball-by-ball CSVs) |
+| Cricsheet | Ball-by-ball IPL dataset |
 
 ---
 
-## Data Source
-**Cricsheet** — cricsheet.org  
-- Dataset: IPL CSV (all_matches.csv)  
-- 1,243 matches across 17 seasons (2008–2026)  
-- 295,732 ball-by-ball delivery records  
-- 27 columns including striker, bowler, runs, extras, wicket type, venue
+## 📂 Data Source
+
+**Cricsheet** — https://cricsheet.org
+
+Dataset Details:
+
+- IPL Ball-by-Ball CSV
+- **1,243 matches**
+- **295,732 deliveries**
+- **27 columns**, including:
+  - Batter
+  - Bowler
+  - Runs
+  - Extras
+  - Wicket Type
+  - Venue
 
 ---
-## Folder Structure
+
+## 📁 Folder Structure
 
 ```text
 ipl-performance-analytics/
@@ -48,105 +76,201 @@ ipl-performance-analytics/
 │
 └── README.md
 ```
+
+---
+
+# 🔧 What Was Built
+
+## 1. Data Cleaning
+
+- Standardized season labels across all IPL seasons
+- Unified franchise names (e.g., Delhi Daredevils → Delhi Capitals)
+- Filled missing extras with zero values
+- Created a Legal Delivery flag by excluding wides and no-balls
+- Extracted over numbers and assigned match phases
+
+---
+
+## 2. Feature Engineering
+
+Created several analytical features including:
+
+- **Match Phase**
+  - Powerplay (Overs 1–6)
+  - Middle Overs (7–15)
+  - Death Overs (16–20)
+
+- **Legal Delivery Flag**
+- **Bowler Runs Conceded**
+- **Match Winner**
+- **Result Type**
+  - Bat First Win
+  - Chase Win
+
+---
+
+## 3. Analysis Performed
+
+### 🏏 Batting Analysis
+
+- Strike Rate by match phase
+- Top Powerplay batters
+- Best Death-over finishers
+- Phase-wise runs and balls faced
+
+### 🎯 Bowling Analysis
+
+- Economy Rate by phase
+- Death-over specialists
+- Powerplay wicket-takers
+- Phase-wise wickets
+
+### 🏟️ Toss & Venue Analysis
+
+- Bat First vs Chase Win %
+- Venue-wise winning trends
+- Toss impact across venues
+
+### 🤝 Team Head-to-Head
+
+- Win percentage between every team pair
+- Match counts
+- Dominant rivalries
+
+### 📈 Season Trends
+
+- Average first innings score by season
+- Evolution of IPL scoring from 2008–2026
+
+---
+
+# 📊 Key Findings
+
+## 🏏 Batting
+
+- **AB de Villiers** recorded the highest Death Overs Strike Rate (**221.59**) among qualified batters.
+- **Rajat Patidar** and **Liam Livingstone** are among the most explosive modern finishers.
+- Batting performance varies significantly across match phases, highlighting strong phase specialization.
+
+---
+
+## 🎯 Bowling
+
+- **Lasith Malinga** claimed **122 wickets** in the Death Overs—the highest among qualified bowlers.
+- **Sunil Narine** maintained one of the best economy rates across phases.
+- **Sohail Tanvir** recorded the lowest Death Overs economy (**6.81**).
+
+---
+
+## 🏟️ Toss & Venue
+
+- Chasing teams won approximately **54%** of IPL matches.
+- **MA Chidambaram Stadium (Chepauk)** strongly favors batting first.
+- **Sawai Mansingh Stadium (Jaipur)** favors chasing teams.
+- UAE venues such as **Sharjah** and **Sheikh Zayed Stadium** also showed a chasing advantage.
+
+---
+
+## 🤝 Team Rivalries
+
+- **Mumbai Indians vs Kolkata Knight Riders**
+  - 37 matches
+  - MI Win Rate: **67.6%**
+
+- **Chennai Super Kings vs Kolkata Knight Riders**
+  - 32 matches
+  - CSK Win Rate: **65.6%**
+
+- **Chennai Super Kings vs Royal Challengers Bengaluru**
+  - 35 matches
+  - CSK Win Rate: **60%**
+
+- **Gujarat Titans vs Rajasthan Royals**
+  - GT Win Rate: **72.7%**
+
+---
+
+## 📈 Season Trends
+
+- Average first innings score increased from **161 (2008)** to **193 (2026)**.
+- IPL entered a significantly higher-scoring era after **2022**.
+- **2009** recorded the lowest average first innings score (**150.3**).
+
+---
+
+# 📊 Power BI Dashboard
+
+The project includes a **4-page interactive Power BI dashboard**.
+
+### Dashboard Pages
+
+1. **Player Analysis**
+   - Phase-wise batting
+   - Bowling performance
+   - Interactive player filters
+
+2. **Team Head-to-Head**
+   - Rivalries
+   - Win percentages
+   - Match counts
+
+3. **Venue & Toss Analysis**
+   - Venue impact
+   - Toss influence
+   - Bat First vs Chase trends
+
+4. **Season Overview**
+   - Scoring trends
+   - Season comparison
+   - Historical analysis
+
+---
+
+# 🚀 How to Run
+
+1. Clone the repository.
+
+```bash
+git clone https://github.com/yourusername/ipl-performance-analytics.git
 ```
 
-## What Was Built
+2. Download the IPL dataset from **Cricsheet**.
 
-### 1. Data Cleaning
-- Standardised 18 season labels (mixed integer and string formats)
-- Unified franchise names across eras (Delhi Daredevils → Delhi Capitals, RCB name fix etc.)
-- Filled missing extras columns with 0
-- Flagged legal deliveries (excluding wides and no-balls) for accurate batting and bowling metrics
-- Extracted over number from ball column and created match phase labels
+3. Place the CSV file inside:
 
-### 2. Feature Engineering
-- **Match Phase** — Powerplay (overs 1–6), Middle (7–15), Death (16–20)
-- **Legal Delivery Flag** — used for correct strike rate and economy calculations
-- **Bowler Runs** — runs off bat + wides + no-balls charged to bowler
-- **Match Winner** — derived from first and second innings totals
-- **Result Type** — Bat First Win vs Chase Win per match
+```text
+data/raw/
+```
 
-### 3. Analysis Areas
+4. Open:
 
-#### Batting
-- Strike rate by phase per batsman (minimum 50 legal balls)
-- Top death over hitters and powerplay anchors
-- Phase-wise runs and balls faced breakdown
+```text
+notebooks/ipl_analysis.ipynb
+```
 
-#### Bowling  
-- Economy rate by phase per bowler (minimum 60 legal balls)
-- Death over specialists and powerplay wicket takers
-- Wickets per phase analysis
+5. Run all notebook cells.
 
-#### Toss & Venue
-- Overall IPL bat first win % vs chase win %
-- Venue-wise bat first win % (minimum 10 matches per venue)
-- Identified venues heavily favouring batting first vs chasing
+6. Processed datasets will be generated in:
 
-#### Team Head to Head
-- Win % for every team pair with minimum 8 matches
-- Identified dominant teams in key rivalries
+```text
+data/processed/
+```
 
-#### Season Trends
-- Average first innings score per season (2008–2026)
-- Scoring evolution across IPL eras
+7. Open:
+
+```text
+dashboard/ipl_dashboard.pbix
+```
+
+using **Power BI Desktop**.
 
 ---
 
-## Key Findings
+# 👨‍💻 Author
 
-### Batting
-- **AB de Villiers** leads death over batting with 221.59 SR (829 balls — large sample)
-- **RM Patidar** and **LS Livingstone** are the standout modern death hitters
-- Death over SR varies massively across batters — phase specialisation is real
+**Sunil Kumar Swain**
 
-### Bowling
-- **SL Malinga** took 122 death wickets — most among qualified death bowlers
-- **SP Narine** is the most economical spinner across phases with 7.25 death economy
-- **Sohail Tanvir** has the lowest death economy (6.81) among qualified bowlers
+🎓 MCA Graduate | Aspiring Data Analyst
 
-### Toss & Venue
-- Overall chasing is slightly favoured in IPL — 54% chase win rate
-- **Chepauk (Chennai)** is the strongest batting-first venue at 62.5% win rate
-- **Sawai Mansingh Stadium (Jaipur)** heavily favours chasing — only 31.9% bat first win rate
-- **Sharjah** and **Sheikh Zayed** (UAE venues) strongly favour chasing
-
-### Team Rivalries
-- **Mumbai Indians vs KKR** is the most played rivalry — 37 matches, MI leads 67.6%
-- **CSK vs KKR** — 32 matches, CSK wins 65.6%
-- **CSK vs RCB** — 35 matches, CSK wins 60%
-- **Gujarat Titans vs Rajasthan Royals** — GT dominates with 72.7% win rate
-- CSK appears in the most dominant rivalry positions overall
-
-### Season Trends
-- Average first innings score grew from **161 (2008)** to **193 (2026)**
-- Significant scoring jump from 2022 onwards — modern IPL is a higher scoring era
-- 2009 was the lowest scoring season on average (150.3)
-
----
-
-## Dashboard (Power BI)
-4-page interactive dashboard built in Power BI Desktop:
-- **Page 1 — Player Analysis** — Phase-wise batting and bowling stats with slicers
-- **Page 2 — Team Head to Head** — Rivalry win % and match counts
-- **Page 3 — Venue & Toss** — Venue impact on match results
-- **Page 4 — Season Overview** — Scoring trends across 17 seasons
-
----
-
-## How to Run
-
-1. Clone this repository
-2. Download IPL CSV data from cricsheet.org/matches and place in `data/raw/`
-3. Open `notebooks/ipl_analysis.ipynb` in Jupyter Notebook
-4. Run all cells in order
-5. Exported CSVs will appear in `data/processed/`
-6. Open `dashboard/ipl_dashboard.pbix` in Power BI Desktop
-
----
-
-## Author
-**Sunil Kumar Swain**  
-MCA Graduate | Aspiring Data Analyst  
-GitHub: github.com/EDITH96929  
-LinkedIn: linkedin.com/in/sunil-kumar-swain-584660288
+- GitHub: https://github.com/EDITH96929
+- LinkedIn: https://www.linkedin.com/in/sunil-kumar-swain-584660288
